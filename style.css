@@ -1,0 +1,30 @@
+p {
+  color: lightgreen;
+}
+p .foo {
+  color:cornflowerblue;
+}
+span {
+  color: orange;
+}
+.foo {
+  color:gold;
+}
+#foo2 {
+  color:crimson;
+  background-color: darkgoldenrod;
+}
+ul > .foo {
+  text-decoration: underline;
+}
+.content-box {
+  border: medium solid gray;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px black;
+  padding: 10px;
+}
+#wrapper:focus {
+  display: flex;
+  color: red;
+}
