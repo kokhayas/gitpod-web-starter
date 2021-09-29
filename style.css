@@ -24,7 +24,44 @@ ul > .foo {
   box-shadow: 5px 5px 5px black;
   padding: 10px;
 }
-#wrapper:focus {
-  display: flex;
-  color: red;
+
+h2 {
+  color:aqua;
+}
+
+#playground {
+  border: medium solid gray;
+  border-radius: 10px;
+  margin: 50px 20px;
+  padding: 15px;
+}
+
+
+
+
+
+
+body {
+  background-color: rgba(231, 231, 231, 0.932);
+}
+
+#all {
+  display:flexbox;
+  flex: 2;
+}
+#container1 {
+  margin: 10px 35%;
+  al
+}
+#icon {
+  width:80%;
+}
+
+#container2 {
+  margin: 10px 35%;
+  background-color: white;
+}
+
+.a .b .c {
+  text-align: center;
 }
