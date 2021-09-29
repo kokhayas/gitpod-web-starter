@@ -58,10 +58,40 @@ body {
 }
 
 #container2 {
-  margin: 10px 35%;
+  margin: 10px 40%;
   background-color: white;
 }
 
-.a .b .c {
+#container2 > div {
+  margin: 5px 20%;
+}
+#b > button {
+  background-color: blue;
+  color: white;
   text-align: center;
+}
+#e {
+  font-size: 10px;
+  color: blue;
+}
+.border {
+  border-bottom: 1px solid orange;
+}
+#f > button {
+  background-color: green;
+  color: white;
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+.inputtext {
+  border-radius: 6px;
+}
+.button {
+  border-radius: 6px;
+  margin
+}
+.button:hover {
+  background-color: gray;
 }
