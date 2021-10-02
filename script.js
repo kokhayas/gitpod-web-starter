@@ -123,39 +123,71 @@ function clicked() {
 let greetButton = document.getElementById("greet-button");
 greetButton.onclick = clicked;
 
-
+result = document.getElementById("omikuji_result");
 function omikuji_clicked() {
   let number = Math.random();
   let data = ""
   if (number < 0.2) {
-    data = "大吉".fontcolor("red");
+    // data = "大吉".fontcolor("red");
+    result.textContent = "大吉";
+    result.style.Color = "red";
     }
   else if (number < 0.5) {
     data = "吉".fontcolor("black")
+    result.textContent = "吉";
+    result.style.Color = "black";
   }
   else {
-    data = "凶".fontcolor("blue")
+    // data = "凶".fontcolor("blue")
+    result.textContent = "凶";
+    result.style.Color = "blue";
   }
-  document.write(`${data}`)
 }
 let omikujiButton = document.getElementById("omikuji-button");
 omikujiButton.onclick = omikuji_clicked;
 
 
-let count_element = document.getElementById(counter)
-function count_up() {
-  count_element.textContent = Number(count_element.textContent) + 1
-  document.write(count_element.textContent)
+// let count_element = document.getElementById(counter)
+// function count_up() {
+//   count_element.textContent = Number(count_element.textContent) + 1
+//   document.write(count_element.textContent)
+// }
+
+// let intervalId; //タイマー番号をグローバル変数として宣言
+ 
+// //startボタンを押すと5秒間隔でalert()が実行
+// function startInterval(){
+// 	intervalID = setInterval(count_up, 1000);
+// }
+ 
+// //stopボタンを押すとタイマーを停止
+// function stopInterval(){
+// 	clearInterval(intervalID);
+// }
+// let counting_result_button = documenet.getElementById("counting_button")
+// let counting_result = document.getElementById("counting");
+// let time=0;
+// function tick() {
+//   time = time + 1;
+//   counting_result.textContent = time;
+// }
+// function onclick() {
+//   senInterval(tick, 1000);
+// }
+// counting_result_button.onclick = onclick;
+
+let result = document.getElementById("result");
+let button = document.getElementById("button");
+
+let time = 0;
+
+function tick() {
+  time = time + 1;
+  result.textContent = time;
 }
 
-let intervalId; //タイマー番号をグローバル変数として宣言
- 
-//startボタンを押すと5秒間隔でalert()が実行
-function startInterval(){
-	intervalID = setInterval(count_up, 1000);
+function onclick() {
+  setInterval(tick, 1000);
 }
- 
-//stopボタンを押すとタイマーを停止
-function stopInterval(){
-	clearInterval(intervalID);
-}
+
+button.onclick = onclick;
