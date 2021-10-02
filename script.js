@@ -1,3 +1,4 @@
+document.write("<h3>script.jsの練習</h3>")
 document.write("Hello world1!")
 document.write("Hello world2!")
 document.write(3+9)
@@ -109,3 +110,52 @@ function findAge(name, students) {
   }
 }
 document.write(`${findAge('Jiro', students)}`);
+
+let element = document.getElementById("greeting");
+element.textContent = "hello dom";
+element.style.color = "green"
+element.style.backgroundColor = "blue"
+
+function clicked() {
+  alert("button is clicked!");
+}
+
+let greetButton = document.getElementById("greet-button");
+greetButton.onclick = clicked;
+
+
+function omikuji_clicked() {
+  let number = Math.random();
+  let data = ""
+  if (number < 0.2) {
+    data = "大吉".fontcolor("red");
+    }
+  else if (number < 0.5) {
+    data = "吉".fontcolor("black")
+  }
+  else {
+    data = "凶".fontcolor("blue")
+  }
+  document.write(`${data}`)
+}
+let omikujiButton = document.getElementById("omikuji-button");
+omikujiButton.onclick = omikuji_clicked;
+
+
+let count_element = document.getElementById(counter)
+function count_up() {
+  count_element.textContent = Number(count_element.textContent) + 1
+  document.write(count_element.textContent)
+}
+
+let intervalId; //タイマー番号をグローバル変数として宣言
+ 
+//startボタンを押すと5秒間隔でalert()が実行
+function startInterval(){
+	intervalID = setInterval(count_up, 1000);
+}
+ 
+//stopボタンを押すとタイマーを停止
+function stopInterval(){
+	clearInterval(intervalID);
+}

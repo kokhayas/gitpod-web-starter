@@ -6,7 +6,31 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="facebookicon.icn>" />
   </head>
-  <body>
+  <body><div id="background">
+    <div id="root">
+      <div id="left">
+        <h1>facebook</h1>
+        <p>
+          Facebookを使うと、友達や同僚、同級生、仲間たちとつながりを深められます。ケータイ、スマートフォンからもアクセスできます。
+        </p>
+      </div>
+      <div id="right">
+        <form>
+          <input placeholder="メールアドレスまたは電話番号" />
+          <input type="password" placeholder="パスワード" />
+          <button id="login">ログイン</button>
+          <a href="#">パスワードを忘れた場合</a>
+          <hr />
+          <button type="button" id="create-new-account">
+            新しいアカウントを作成
+          </button>
+        </form>
+        <p>
+          有名人、バンド、ビジネスのためにFacebookページを作成
+        </p>
+      </div>
+    </div>
+  </div>
 
     <div id="all">
       <div class="container" id="container1">
@@ -57,12 +81,23 @@
         Foo
       </div>
       
-      
+      <div id="greeting">greeting!</div>
+      <button id="greet-button" type="button">クリック</button>
+      <div>
+      <button id="omikuji-button" type="button">おみくじボタン</button>
+      </div>
+      <!-- <button id="start_button" type="button">スタート</button> -->
+
+<p id=counter>0</p>
+<input type="button" value="start" onclick="startInterval();">
+<input type="button" value="stop" onclick="stopInterval();">
+
       <div id='script'>
-        <script src="./script.js"></script>
+
       </div>
 
 
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

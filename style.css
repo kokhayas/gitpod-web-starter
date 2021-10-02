@@ -1,3 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#background {
+  background-color: #f0f2f5;
+}
+
+#root {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 30px;
+}
+
+#left {
+  flex-grow: 1;
+  margin-right: 50px;
+}
+
+h1 {
+  margin: 50px 0 0 0;
+  font-size: 50px;
+  color: #1877f2;
+}
+
+#left > p {
+  font-size: 150%;
+}
+
+form {
+  width: 350px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #dddddd;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#login {
+  width: 100%;
+  background-color: #1877f2;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 70%;
+}
+
+hr {
+  margin: 20px auto;
+  border: 1px solid #eeeeee;
+}
+
+#create-new-account {
+  background-color: #42b72a;
+}
+
+#right > p {
+  text-align: center;
+  font-size: 70%;
+}
+
 p {
   color: lightgreen;
 }
@@ -36,7 +123,11 @@ h2 {
   padding: 15px;
 }
 
-
+#script {
+  border: medium solid gray;
+  border-radius: 8px;
+  padding: 8px;
+}
 
 
 
