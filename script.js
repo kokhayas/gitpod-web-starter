@@ -217,26 +217,46 @@
 // console.log('hello world');
 // document.write('こんにちわ');
 
-let _start_button = document.getElementById('start_button');
+let _start_button = document['getElementById']('start_button');
 let _stop_button = document.getElementById('stop_button');
 let _result = document.getElementById('result');
-
+let _ball = document.getElementById('ball');
 let intervalId;
-let number = 0;
+let time = 0;
+let deltaT = 0.1;
+let x=0;
+let y=0;
+let u = 5;
+let v = 0;
+let gravity = -9.8;
+
 
 function f_count_up() {
-  number += 1
-  _result.textContent = number;
+  time += 1
+  _result.textContent = time;
+
+  x += u*deltaT;
+  v -= gravity * deltaT
+  y += v * deltaT
+  _ball.style.left = 100 + x + "px";
+  _ball.style.top = 50 + y + "px";
 }
 
 function f_start() {
-  intervalId = setInterval(f_count_up, 1000);
+  intervalId = setInterval(f_count_up, 10);
   console.log(intervalId)
 }
 
 function f_stop() {
-  clearInterval(intervalId);
+  v = -v
+  // clearInterval(intervalId);
 }
 
 _start_button.onclick = f_start;
 _stop_button.onclick = f_stop;
+
+document.write(_ball.style.left)
+
+
+
+

@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -185,4 +185,16 @@ body {
 }
 .button:hover {
   background-color: gray;
+} */
+
+
+#ball {
+  /* display: inline-block; */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: blue;
+  position:absolute;
+  /* left:100px;
+  top:500px; */
 }
