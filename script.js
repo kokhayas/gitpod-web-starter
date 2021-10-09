@@ -191,3 +191,26 @@ function onclick() {
 }
 
 button.onclick = onclick;
+
+let _left_number = document.getElementById('left_numbner');
+let _right_number = document.getElementById('right_numnber');
+let _added_number = document.getElementById('added_number');
+let _calculate_button = document.getElementById('calculate_button');
+
+function calculate_clicked() {
+  _added_number.textContent = parseInt(_left_number.value, 10) + parseInt(_right_number.value, 10);
+}
+
+_calculate_button.onclick = calculate_clicked;
+
+
+let left = document.getElementById("left");
+let right = document.getElementById("right");
+let result = document.getElementById("result");
+let calculate = document.getElementById("calculate");
+
+function clicked() {
+  result.textContent = parseInt(left.value, 10) + parseInt(right.value, 10);
+}
+
+calculate.onclick = clicked;
