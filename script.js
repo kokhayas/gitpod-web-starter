@@ -255,7 +255,6 @@ function f_stop() {
 _start_button.onclick = f_start;
 _stop_button.onclick = f_stop;
 
-document.write(_ball.style.left)
 
 
 
