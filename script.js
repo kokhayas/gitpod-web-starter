@@ -217,45 +217,101 @@
 // console.log('hello world');
 // document.write('こんにちわ');
 
-let _start_button = document['getElementById']('start_button');
-let _stop_button = document.getElementById('stop_button');
-let _result = document.getElementById('result');
-let _ball = document.getElementById('ball');
-let intervalId;
-let time = 0;
-let deltaT = 0.1;
-let x=0;
-let y=0;
-let u = 5;
-let v = 0;
-let gravity = -9.8;
+// let _start_button = document['getElementById']('start_button');
+// let _stop_button = document.getElementById('stop_button');
+// let _result = document.getElementById('result');
+// let _ball = document.getElementById('ball');
+// let intervalId;
+// let time = 0;
+// let deltaT = 0.1;
+// let x=0;
+// let y=0;
+// let u = 5;
+// let v = 0;
+// let gravity = -9.8;
 
 
-function f_count_up() {
-  time += 1
-  _result.textContent = time;
+// function f_count_up() {
+//   time += 1
+//   _result.textContent = time;
 
-  x += u*deltaT;
-  v -= gravity * deltaT
-  y += v * deltaT
-  _ball.style.left = 100 + x + "px";
-  _ball.style.top = 50 + y + "px";
+//   x += u*deltaT;
+//   v -= gravity * deltaT
+//   y += v * deltaT
+//   _ball.style.left = 100 + x + "px";
+//   _ball.style.top = 50 + y + "px";
+// }
+
+// function f_start() {
+//   intervalId = setInterval(f_count_up, 10);
+//   console.log(intervalId)
+// }
+
+// function f_stop() {
+//   v = -v
+//   // clearInterval(intervalId);
+// }
+
+// _start_button.onclick = f_start;
+// _stop_button.onclick = f_stop;
+
+
+
+// let result = document.getElementById("result");
+// let button = document.getElementById("button");
+
+// function onclick() {
+//   let r = Math.random();
+//   if (r < 0.2) {
+//     result.textContent = "大吉";
+//     result.style.color = "red";
+//   } else if (r < 0.7) {
+//     result.textContent = "吉";
+//     result.style.color = "black";
+//   } else {
+//     result.textContent = "きょう";
+//     result.style.color = "blue";
+//   }
+// }
+
+// button.onclick = onclick;
+
+// let result = document.getElementById("result");
+// let button = document.getElementById("button");
+// let stop_button = document.getElementById("stop_button")
+// let time = 0;
+
+// function tick() {
+//   time = time + 1;
+//   result.textContent = time + 's';
+// }
+
+// let timerId;
+
+// function start() {
+//   timerId = setInterval(tick, 1000);
+// }
+
+// function stop_function() {
+//   clearInterval(timerId);
+// }
+
+// button.onclick = start;
+// stop_button.onclick = stop_function;
+
+
+let age = 21; 
+
+if (age < 18) {
+  document.write('選挙権はありません'); 
+  age = 40
 }
-
-function f_start() {
-  intervalId = setInterval(f_count_up, 10);
-  console.log(intervalId)
+else if (age >= 18 && age < 25) {
+  document.write('投票に行けます');
 }
-
-function f_stop() {
-  v = -v
-  // clearInterval(intervalId);
+else if (age < 30) {
+  document.write('25歳以上、30歳未満です。衆議院議員に立候補できます')
 }
-
-_start_button.onclick = f_start;
-_stop_button.onclick = f_stop;
-
-
-
-
-
+else {
+  document.write('衆議院議員に立候補できます');
+}
