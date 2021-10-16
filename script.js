@@ -275,43 +275,58 @@
 // }
 
 // button.onclick = onclick;
+// let created = document.createElement("span");
 
-// let result = document.getElementById("result");
-// let button = document.getElementById("button");
-// let stop_button = document.getElementById("stop_button")
-// let time = 0;
+let result = document.getElementById("result");
+let button = document.getElementById("button");
+let stop_button = document.getElementById("stop_button")
+let time = 0;
 
-// function tick() {
-//   time = time + 1;
-//   result.textContent = time + 's';
+// let newDiv = document.createElement("div");
+// // いくつかの内容を与えます
+// let newContent = document.createTextNode("Hi there and greetings!");
+// // テキストノードを新規作成した div に追加します
+// newDiv.appendChild(newContent);
+
+function tick() {
+  time = time + 1;
+  result.textContent = time + 's';
+}
+
+let timerId;
+
+function start() {
+  timerId = setInterval(tick, 1000);
+}
+
+function stop_function() {
+  clearInterval(timerId);
+}
+
+button.onclick = start;
+stop_button.onclick = stop_function;
+
+
+
+
+
+// let age = 21; 
+
+// if (age < 18) {
+//   document.write('選挙権はありません'); 
+//   age = 40
+// }
+// else if (age >= 18 && age < 25) {
+//   document.write('投票に行けます');
+// }
+// else if (age < 30) {
+//   document.write('25歳以上、30歳未満です。衆議院議員に立候補できます')
+// }
+// else {
+//   document.write('衆議院議員に立候補できます');
 // }
 
-// let timerId;
-
-// function start() {
-//   timerId = setInterval(tick, 1000);
-// }
-
-// function stop_function() {
-//   clearInterval(timerId);
-// }
-
-// button.onclick = start;
-// stop_button.onclick = stop_function;
 
 
-let age = 21; 
 
-if (age < 18) {
-  document.write('選挙権はありません'); 
-  age = 40
-}
-else if (age >= 18 && age < 25) {
-  document.write('投票に行けます');
-}
-else if (age < 30) {
-  document.write('25歳以上、30歳未満です。衆議院議員に立候補できます')
-}
-else {
-  document.write('衆議院議員に立候補できます');
-}
+
